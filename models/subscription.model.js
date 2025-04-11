@@ -80,4 +80,10 @@ subscriptionSchema.pre('save', function (next) {
         this.status = 'expired';
     };
 
+    next();
+
 })
+
+const Subscription = mongoose.model('Subscription', subscriptionSchema);
+
+export default Subscription;
